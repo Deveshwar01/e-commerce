@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>collage project</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="home.css">
+    <script src="https://kit.fontawesome.com/d03a15e86b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="header">
+        <a href="#"> <img src="images/logo.png" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="catogery.html">catogery</a></li>
+                <li><a href="contact.html">Contact </a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-regular fa-circle-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile" style="list-style:none;">
+            <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+    <section id="prodetails" class=" section-p1">
+        <div class="single-pro-image">
+            <img src="images/f1.jpg" width="100%" id="MainImg" alt="">
+            <div class="small-img-group">
+                <div class="small-img-col">
+                    <img src="images/f1.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/f2.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/f3.jpg" width="100%" class="small-img" alt="">
+                </div>
+                <div class="small-img-col">
+                    <img src="images/f4.jpg" width="100%" class="small-img" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="single-pro-details">
+            <h6> home / t-shirt</h6>
+            <h4>men fashion t shirt</h4>
+            <h2>139</h2>
+            <select>
+                <option>select size</option>
+                <option>x</option>
+                <option>xl</option>
+                <option>xxl</option>
+                <option>xxxl</option>
+            </select>
+            <input type="number " value="1">
+            <button class="normal">Add to Cart</button>
+            <h4> product details</h4>
+            <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quia rerum nemo atque quae, molestias vel
+                suscipit ducimus inventore excepturi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum
+                at qui quo, esse excepturi, explicabo hic eos harum unde earum quibusdam quaerat nesciunt delectus,
+                vitae doloremque repellat! Quae, aperiam illum!
+            </span>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="images/logo.png" alt="">
+            <h4> contact</h4>
+            <p><strong>Address:</strong> Lorem ipsum dolor sit amet.</p>
+            <p><strong>phone:</strong> +91-8979657578576</p>
+            <p><strong>hours:</strong> 24*7</p>
+            <div class="follow">
+                <h4>follow us</h4>
+                <div class="icon">
+                    <i class="fab-fa-facebook"></i>
+                    <i class="fab-fa-instagram"></i>
+                    <i class="fab-fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>about</h4>
+            <a href="#">about us</a>
+            <a href="#">delivery information</a>
+            <a href="#">privarcy policy</a>
+            <a href="#">contact us</a>
+        </div>
+        <div class="col">
+            <h4>My account</h4>
+            <a href="#">about us</a>
+            <a href="#">delivery information</a>
+            <a href="#">privarcy policy</a>
+            <a href="#">contact us</a>
+        </div>
+    </footer>
+
+    <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function () {
+            MainImg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function () {
+            MainImg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function () {
+            MainImg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function () {
+            MainImg.src = smallimg[3].src;
+        }
+    </script>
+</body>
+
+</html>
