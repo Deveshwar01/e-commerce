@@ -57,7 +57,7 @@
                 <option>xxxl</option>
             </select>
             <input type="number " value="1">
-            <button class="normal">Add to Cart</button>
+            <button class="normal" id="button-cart">Add to Cart</button>
             <h4> product details</h4>
             <span>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit quia rerum nemo atque quae, molestias vel
@@ -98,7 +98,6 @@
             <a href="#">contact us</a>
         </div>
     </footer>
-
     <script>
         var MainImg = document.getElementById("MainImg");
         var smallimg = document.getElementsByClassName("small-img");
@@ -115,6 +114,29 @@
         smallimg[3].onclick = function () {
             MainImg.src = smallimg[3].src;
         }
+    //   const urlSearchParams = new URLSearchParams(window.location.search);
+    //    const id = urlSearchParams.get('id');
+
+    //    $data = [];
+    //     xhr = new XMLHttpRequest();
+    //     xhr.open('GET', `http://localhost/commerce/cart-item.php?id=${id}`,  true);
+    //     xhr.onload = function(){
+    //         if(this.status === 200){
+    //             $data = JSON.parse(this.responseText);
+    //             console.log($data);
+    //         }
+    //     }
+
+    //     xhr.send();
+
+    //    console.log($data);
+    //     const cartButton = document.getElementById('button-cart');
+        
+    //     cartButton.addEventListener('click', (e)=>{
+    //        e.preventDefault();
+
+    //        //todo
+    //     })
     </script>
 </body>
 
