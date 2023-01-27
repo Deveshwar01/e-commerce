@@ -60,37 +60,44 @@ body {
     top: 0;
     left: 0;
 }
+
 /* logo image */
 #header a img {
     width: 200px;
-    height: 50px;
+    height: 47px;
 }
+
 /* rbu e commerce effect */
-h1{
+h1 {
     color: black;
     font-size: 35px;
     font-weight: lighter;
     letter-spacing: 7px;
     cursor: pointer;
-  }
-  h1 span{
+}
+
+h1 span {
     transition: .5s linear
-  }
-  h1:hover span:nth-child(1){
+}
+
+h1:hover span:nth-child(1) {
     margin-right: 5px
-  }
-  h1:hover span:nth-child(1)::after{
+}
+
+h1:hover span:nth-child(1)::after {
     content: "'";
-  }
-  h1:hover span:nth-child(2){
+}
+
+h1:hover span:nth-child(2) {
     margin-left: 30px
-  }
-  h1:hover span{
+}
+
+h1:hover span {
     color: #fff;
     text-shadow: 0 0 10px #fff,
-                 0 0 20px #fff, 
-                 0 0 40px #fff;
-  }
+        0 0 20px #fff,
+        0 0 40px #fff;
+}
 
 #navbar {
     display: flex;
@@ -147,38 +154,78 @@ h1{
 
 /* home page */
 #hero {
-    background-image: url(images/rbu.jpeg);
     height: 90vh;
     width: 100%;
     background-size: cover;
     background-position: top 25% 0;
-    padding: 0 80px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    /* padding: 0 80px; */
 }
 
-#hero h4 {
-    padding-bottom: 15px;
+.slideshow {
+    list-style-type: none;
 }
 
-#hero h1 {
-    color: #088178;
+/** SLIDESHOW **/
+.slideshow,
+.slideshow:after {
+    top: -16px;
+    /*Not sure why I needed this fix*/
+    position: sticky;
+    width: 100%;
+    height: 90vh;
+    left: 0px;
+    z-index: 0;
 }
 
-#hero button {
-    background-image: url(images/button.png);
-    background-color: transparent;
-    color: #088178;
-    border: 0;
-    padding: 14px 80px 14px 65px;
+.slideshow li span {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
-    cursor: pointer;
-    font-weight: 700;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 3s linear infinite 0s;
 }
 
+.slideshow li:nth-child(1) span {
+    background-image: url(images/12-3.jpg);
+}
+
+.slideshow li:nth-child(2) span {
+    background-image: url(images/13.jpg);
+    animation-delay: 4s;
+}
+
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+    }
+
+    100% {
+        opacity: 1;
+        animation-timing-function: ease-in-out;
+    }
+}
+
+@keyframes titleAnimation {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+/* feature section */
 #feature {
+    margin-top: -20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,7 +241,6 @@ h1{
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
-
 }
 
 #feature.fe-box:hover {
